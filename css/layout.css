@@ -1,0 +1,193 @@
+/* @override 
+	http://fiveseeds.officeofkb.com/sites/fiveseeds.officeofkb.com/themes/fiveseedsv2/css/layout.css?C
+	http://fiveseeds.officeofkb.com/sites/fiveseeds.officeofkb.com/themes/fiveseedsv2/css/layout.css?I
+*/
+
+/* $Id */
+
+/* Some super basic layout CSS. Replace with your own. */
+
+/* Layout
+ * ------
+ * Using a negative margin technique, adapted from ZEN. The page is loaded by this order:
+ *
+ * 1. Header
+ * 2. Content
+ * 3. Navigation menus
+ * 4. Sidebar Left
+ * 5. Sideabr Right */
+
+/* The Page GRID */
+/*
+ 1 column { width:   73px; }
+ 2 column { width:  176px; }
+ 3 column { width:  279px; }
+ 4 column { width:  382px; }
+ 5 column { width:  485px; }
+ 6 column { width:  588px; }
+ 7 column { width:  691px; }
+ 8 column { width:  794px; }
+ 9 column { width:  897px; }
+10 column { width: 1000px; }
+
+Gutter: 30px;
+
+*/ 
+
+ .c1 { width:   73px; }
+ .c2 { width:  176px; }
+ .c3 { width:  279px; }
+ .c4 { width:  382px; }
+ .c5 { width:  485px; }
+ .c6 { width:  588px; }
+ .c7 { width:  691px; }
+ .c8 { width:  794px; }
+ .c9 { width:  897px; }
+.c10 { width: 1000px; } 
+
+/* thanks to gridulator.com for the math */ 
+
+/* remove 'auto' and the width to switch to a fluid width */
+#page, header .inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.) */
+#main {
+	/*margin-left: 103px;*/
+	}
+
+#content {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0;
+}
+
+.sidebar {
+  float: left;
+}
+
+#sidebar-second {
+  float: right;
+}
+
+#footer {
+  float: none;
+  clear: both;
+}
+
+/* Layout Helpers */
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+
+/* Sidebars width
+ * --------------
+ * Changing the width of the sidebars is dead easy, just change the
+ * values below corresponding to the sidebar you want to modify.
+ * Make sure you keep negative values as negative values.
+ * For example, if I want to increase the width of the left sidebar
+ * to 300px, I would have to change each '190' to '300'. */
+.two-sidebars .center,
+.sidebar-first .center {
+  margin-left: 206px;
+}
+
+#sidebar-first {
+  width: 176px;
+  margin-right: -176px;
+}
+
+.two-sidebars .center,
+.sidebar-second .center {
+  margin-right: 412px;
+}
+
+#sidebar-second {
+  width: 382px;
+}
+
+
+/* Columns Inner
+ * -------------
+ * You can change the padding inside the columns without changing the
+ * width of them by just usinbg the INNER div of each column */
+.inner {
+  padding: 15px;
+}
+
+/* NAVIGATION / PRIMARY LINKS */
+nav#navigation.menu {
+  background: #B03B31;
+	height: 32px;
+  /**/
+  position: fixed;
+  top: 125px;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  -moz-box-shadow: 0 3px 5px #666;
+  -webkit-box-shadow: 0 3px 5px #666;
+  box-shadow: 0 3px 5px #666;
+	}
+
+
+nav#navigation.menu ul {
+  border-left: 1px solid white;
+	list-style: none;
+	height: 32px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	width: 1000px;
+	}
+
+nav#navigation.menu ul li {
+  border-right: 1px solid white;
+	height: 24px;
+  display: inline-block;
+  margin: 0 0 0 15px;
+  padding: 8px 14px 0 0;
+  }
+
+/* OLD NAV STUFF FROM WHEN IT WAS A DROPDOWN MENU IN THE lEFT MOST SIDEBAR AREA... */
+/* NAVIGATION / PRIMARY LINKS */
+/*
+nav#navigation.menu {
+	position: fixed;
+	left: 50%;
+	margin-left: -510px;
+	top: 130px;
+	width: 93px;
+	min-height: 25px;
+	}
+
+nav#navigation.menu ul {
+	background: white url(i/menuarrow.png) center 98% no-repeat;
+	list-style: none;
+	margin: -10px 0 0 0;
+	padding: 30px 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+
+.front nav#navigation.menu ul {
+	margin-top: -235px;
+	-webkit-transition: margin-top;
+	-webkit-transition-timing-function: ease-in;
+	-webkit-transition-duration: 250ms;	
+	-moz-transition: margin-top;
+	-moz-transition-timing-function: ease-in;
+	-moz-transition-duration: 250ms;	
+	}
+
+nav#navigation.menu:hover ul { margin-top:-10px; }
+*/

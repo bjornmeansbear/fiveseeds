@@ -1,0 +1,706 @@
+/* @override 
+	http://fiveseeds.officeofkb.com/sites/fiveseeds.officeofkb.com/themes/fiveseedsv2/css/5seeds.css?C
+	http://fiveseeds.officeofkb.com/sites/fiveseeds.officeofkb.com/themes/fiveseedsv2/css/5seeds.css?I
+	http://fiveseeds.officeofkb.com/sites/fiveseeds.officeofkb.com/themes/fiveseedsv2/css/5seeds.css?W
+*/
+
+/* The Page GRID */
+/*
+ 1 column { width:   73px; }
+ 2 column { width:  176px; }
+ 3 column { width:  279px; }
+ 4 column { width:  382px; }
+ 5 column { width:  485px; }
+ 6 column { width:  588px; }
+ 7 column { width:  691px; }
+ 8 column { width:  794px; }
+ 9 column { width:  897px; }
+10 column { width: 1000px; }
+*/ 
+/* thanks to gridulator.com for the math */ 
+ 
+/* Colors */
+/*
+ Green:  rgb(114,131,79)
+ Blue:   rgb(117,153,189)
+ Yellow: rgb(208,157,31)
+ Red:    rgb(176,59,49)
+*/ 
+
+/* Universals */
+html {margin: 0; padding: 0;}
+.clear {clear:both;}
+.left {float:left;}
+.right {float:right;}
+.bottomMargin {margin-bottom: 15px;}
+.strike {text-decoration: line-through;}
+.attention {color:rgb(176,59,49);}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+::selection {
+  background: rgb(176,59,49);
+  color: white;
+  text-shadow: none;
+  }
+a.small,
+p.small {
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+hr {
+  border: solid #7599BD;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  border-width: 1px 0 0;
+}
+del, strike, .strike, .line-through {text-decoration: line-through !important;}
+
+.span3 { float: left; width: 279px; margin: 15px; }
+.span6 { float: left; width: 588px; margin: 15px; }
+
+.offset2 { margin-left: 191px;}
+
+.jumbotron {
+  background: white;
+  margin-top: 30px;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  /**/
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.span3.jumbotron {
+  padding: 30px;
+}
+
+/*full coverage background image -- need to figure out how to feed a result from views to this, but this will work for now */
+html {
+  background: url(rotator.php) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+/*body {
+  background: transparent url(i/col-grid.png) center top repeat-y;
+  padding-bottom: 50px;
+  }*/
+
+#page {position: relative; z-index: 2;}
+  
+#page > header {
+	background: white;
+	/*border-bottom: 3px solid rgb(176,59,49);*/ /* commented out for menu to go horizontal */
+	height: 125px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	/**/
+	-moz-box-shadow: 0 3px 5px #666;
+	-webkit-box-shadow: 0 3px 5px #666;
+	box-shadow:  0 3px 5px #666;
+	}	
+
+#page > header .inner {
+  background: transparent url(i/5seedsbanner2.jpg) center center no-repeat;
+  height: 125px;
+  }
+	
+header #logo-title {
+	padding-top: 7px;
+	}
+header #logo-title a#logo {
+	float: left;
+	display: inline-block;
+	}	
+header #logo-title a#logo img {
+	height: auto;
+	width: 111px;
+	}
+header #logo-title #name-and-slogan {
+  margin-left: 131px;
+  padding-top: 20px;
+  }
+  	
+/* TYPOGRAPHY AND TYPE COLORING + HIERARCHY
+************************************************/
+/*@font-face declarations*/
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('ff/lg/League_Gothic-webfont.eot');
+  src: url('ff/lg/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('ff/lg/League_Gothic-webfont.woff') format('woff'),
+       url('ff/lg/League_Gothic-webfont.ttf') format('truetype'),
+       url('ff/lg/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+/*the rest*/
+body { color: #757679; }
+h1#site-name, #content-header h1.title {
+  color:black;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: /*.2em*/0;
+  padding:0;
+  text-transform: uppercase;
+  /**/
+  }
+h1#site-name a {
+  /*color: rgb(114,131,79);*/
+  color:black;
+  border: 0;
+  }
+
+h1#site-name {
+  font-size: 4em;
+  }
+
+h1#site-name, h1#site-name a, h1#site-name a span {
+	height: auto !important;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+	}
+
+#site-slogan {
+  color:black;
+  font-family: georgia, times, "times new roman", serif;
+  font-size: 1.5em;
+  font-style: italic;	
+  }
+
+#content-header h1.title {
+  font-size: 2.6em;
+  }
+
+#content-header h1.title, aside h3.title {
+  border-bottom: 1px solid rgb(117,153,189);
+  color: rgb(114,131,79);
+  font-weight: normal;
+  margin-bottom: .5em;
+  }
+
+aside h3.title, h3.title.block-title {
+  font-weight: normal;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  }
+
+/* dropdown menu */
+#dropdown li a {
+  /*color: rgb(114,131,79);*/
+  color: white;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  font-size: 130%;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;	  	
+  /**/
+  /*padding: 8px 14px 0 14px;*/
+  }
+
+#dropdown li:hover, #dropdown li:hover a {
+  /*background: rgb(114,131,79);
+  color: white;*/
+  }
+
+/* LINKS */
+#content a, .sidebar a {
+  color: rgb(117,153,189);
+  text-decoration: none;
+  padding-bottom: 1px;
+  -webkit-transition: color;
+  -webkit-transition-duration: 500ms;
+  -moz-transition: color;
+  -moz-transition-duration: 500ms;
+  }  
+#content a:hover, .sidebar a:hover {
+  border-bottom: 1px solid rgb(114,131,79);
+  color: rgb(114,131,79);
+  }  
+
+
+
+/* GENERAL STUFF
+************************************************/
+#main { margin-top: 135px; }
+#content-inner { padding-top: 40px; padding-bottom: 45px; }
+aside#sidebar-second { padding-top: 48px; }	
+	
+#content-inner, 
+aside#sidebar-second
+/*#dropdown*/ {
+  background: white;
+  /**/
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  /**/
+  -moz-box-shadow: 3px 3px 5px #666;
+  -webkit-box-shadow: 3px 3px 5px #666;
+  box-shadow:  3px 3px 5px #666;
+  }
+  
+.front #content-inner {
+	background: transparent;
+	padding: 0;
+	} 
+
+
+/* commented out here is a vertical dropdown menu, now going to horizontal, saving for posterity
+#dropdown li {
+	border-top: 1px solid rgb(117,153,189);
+	padding: 4px 6px;
+	}*/
+/* commented out here is a vertical dropdown menu, now going to horizontal, saving for posterity
+#dropdown li.FAQ {
+	border-bottom: 1px solid rgb(117,153,189);
+	}*/
+
+
+/* CSA / Farm Share
+************************************************/
+div.toggle {
+  margin: 0;
+  padding: 15px;
+  }
+div.toggle:hover {
+  background: #F9F9F9;
+  }
+div.toggle > h3 {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+  }
+div.toggle > h3:hover {
+  color: #7599BD;
+  cursor: pointer;
+  }
+div.toggle > h3:hover span {
+  border-bottom: 1px solid #7599BD;
+  color: #7599BD;
+  }
+
+/* minimize clicking while CSA is sold out */
+div#csa > h3 {
+  cursor: default;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+  }
+div#csa > h3:hover {
+  color: #757679;
+  cursor: default;
+  }
+div#csa > h3:hover span {
+  border-bottom: none;
+  color: #757679;
+  }
+div#csa > h3:hover span.attention {
+  border-bottom: none;
+  color: rgb(176,59,49);
+  text-decoration: line-through;
+  }
+/**/  
+  
+div.toggle > form {padding-bottom: 25px;}
+
+
+/* Market Sidebar
+************************************************/
+#sidebar-second .block  {
+  padding: 15px;  	
+  }
+
+.view-markets ul {
+  list-style: none;
+  font-size: 90%;
+  margin: 0;
+  padding: 0;
+  }
+
+.view-markets ul li {
+  list-style: none;
+  margin: 0 0 15px 0;
+  }
+
+.view-markets ul li div.wkday,
+.view-markets ul li div.start, 
+.view-markets ul li div.end {
+  float: left;
+  clear: left;
+  width: 70px;
+  }
+
+.view-markets ul li div.title,
+.view-markets ul li div.dates,
+.view-markets ul li div.address,
+.view-markets ul li div.url {
+  margin-left: 93px;
+  }
+
+.view-markets ul li div.wkday,
+.view-markets ul li div.start, 
+.view-markets ul li div.end,
+.view-markets ul li div.title {
+  color: black;
+  }
+
+.view-markets ul li div.wkday,
+.view-markets ul li div.start, 
+.view-markets ul li div.end {
+  text-transform: uppercase;
+  font-size: 85%;	
+  }
+.view-markets ul li div.title {
+  font-size: 110%;
+  font-weight: bold;
+  }
+
+/* About page content-bottom */
+#content-bottom {
+	border-top: 1px solid rgb(117,153,189);
+	font-size: 85%;
+	line-height: 133%;
+	margin-top: 15px;
+	padding-top: 15px;
+	}
+#content-bottom .block.c2 {
+	float: left;
+	margin-right: 15px;
+	}
+#content-bottom #block-block-1.c2,
+#content-bottom #block-views-restaurant_partner-block_1.c2 {
+	margin: 0;
+	}
+#content-bottom .block.c2 h3.title {
+	color: rgb(114,131,79);
+	margin-bottom: .33em;
+	}
+#content-bottom:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+#content-bottom ul.restaurants {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#content-bottom ul.restaurants li {
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+}
+
+/* Press Page */
+.view-press ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+.view-press ul li {
+  margin-bottom: 2em;
+  }
+.view-press ul li div.title {
+  color: black;
+  font-size: 110%;
+  font-weight: bold;
+  }
+.view-press ul li div.media label {
+  text-transform: uppercase;
+  font-size: 85%;	
+  }
+  
+/* Photos Page */
+.view-photos ul.photos-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+.view-photos ul.photos-list li,
+.view-photos ul.photos-list li div.photos,
+.view-photos ul.photos-list li div.photos div.sb-image,
+.view-photos ul.photos-list li div.photos div.sb-image a,
+.view-photos ul.photos-list li div.photos div.sb-image a img {
+  display: inline-block;
+  height: 182px;
+  margin: 0;
+  padding: 0;
+  width: 182px;
+  float: left;
+  }
+.view-photos ul.photos-list li {
+  margin: 0 15px 15px 0;
+  }
+
+.view-photos ul.photos-list li.last {
+  margin-right: 0;
+  }
+
+/* FAQ */
+.page-frequently-asked-questions article#node-2 p {margin-bottom: 2em;}
+.page-frequently-asked-questions article#node-2 p strong {color:rgb(176,59,49);}
+    
+/* facebook like + tweet buttons */
+#header-region {
+	position: fixed;
+	right: 50%;
+	margin-right: -490px;
+	top: 10px;
+	width: 110px;
+	}  
+
+#header-region #block-block-6 { width: 126px; margin-top:  }
+#header-region div.fbook { margin: 0px; padding: 0; }
+
+a.fb,
+a.twit,
+a.insta {
+  float: right;
+  display: block;
+  height: 36px;
+  width:  36px;
+  margin-left: 6px;
+}
+
+img.logolink {
+  height: 36px;
+  width:  36px;
+}
+
+#block-block-13 {
+  text-align: center;
+  margin-left: 88px;
+}
+
+.page-about-us #content-bottom #block-block-1 {
+  margin-bottom: 30px;
+}
+
+/* OOKB link */
+#block-block-9 {
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+#block-block-9 p {
+  color: white;
+  padding-top: -10px;
+  font-size: 75%;
+  text-transform: uppercase;
+}
+
+#block-block-9 p img {
+  border:none;
+  margin: 10px 0 -7px 0;
+  width: 24px;
+}
+
+
+/*================*/
+.whitebg {
+  background: white; 
+  padding: 30px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  }
+  
+.whitebg p {
+  font-size: 2.5em;
+  font-family: georgia, times, sans-serif;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.whitebg p.fineprint { font-size: 1.66em; line-height: 1.5;}
+
+/* CSA badge */
+.front #content-inner {
+  -moz-border-radius: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+	/**/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.front #block-block-10 {
+  padding-top: 70px;
+  text-align: center;
+  width: 485px;
+}
+
+.front #block-block-10 h3 {
+  background: #72834F;
+  color: white;
+  font-size: 2.5em;
+  line-height: 1.75em;
+  margin: 0 auto -50px auto;
+  text-align: center;
+  position: relative;
+  width: 382px;
+  z-index: 10;
+  /**/
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  /**/
+  -moz-box-shadow: 3px 3px 5px #666;
+  -webkit-box-shadow: 3px 3px 5px #666;
+  box-shadow:  3px 3px 5px #666;
+  }
+
+.front #block-block-10 p:first-child a {
+  border: none;
+  text-decoration: none;
+}
+
+.front #block-block-10 a img {
+  border: none;
+  text-decoration: none;
+  position: relative;
+  z-index: 8;
+}
+
+.front #block-block-10 p:last-child {
+  background: white;
+  font-size: 1.25em;
+  line-height: 1.6em;
+  margin: 0 auto -50px;
+  padding: .75em 1.5em 1.5em;
+  text-align: center;
+  position: relative;
+  width: 382px;
+  z-index: 10;
+  /**/
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  /**/
+  -moz-box-shadow: 3px 3px 5px #666;
+  -webkit-box-shadow: 3px 3px 5px #666;
+  box-shadow:  3px 3px 5px #666;
+}
+
+/* Mailchimp form */
+div.block.mailchimp {
+  font-size: 110%;
+}
+
+div.block.mailchimp form div.mc-field-group {
+  margin-bottom: 6px;
+}
+
+div.block.mailchimp form #mce-responses {
+  border-top: 1px solid #7599BD;
+  margin-top: .5em;
+  margin-bottom: 6px;
+}
+
+div.block.mailchimp form div.mc-field-group label {
+  display: block;
+  float: left;
+}
+
+div.block.mailchimp form div.mc-field-group input {
+  display: block;
+  width: 220px;
+  margin-left: 129px;
+  margin-bottom: 3px;
+}
+
+div.block.mailchimp .asterisk {
+  color:#B03B31;
+}
+
+div.block.mailchimp .indicates-required {
+  color:#B03B31;
+  font-size: 80%;
+  margin-top: 6px;
+}
+
+/*full coverage background image -- need to figure out how to feed a result from views to this, but this will work for now */
+#rotate {
+  position: fixed;
+  top: 125px;
+  left: 0;
+  z-index: 1;
+  /**/
+  height: auto;
+  width: 100%;
+}
+
+#rotate img {
+  /**/
+  height: auto;
+  width: 100%;
+}
+
+/*** NO LONGER AT MARKET BLOCK! */
+#block-block-12 {
+  background: white;
+  font-size: 125%;
+  height:350px;
+  position: relative;
+  text-align: center;
+  top: 51px;
+  width: 350px;
+  /**/
+  -moz-border-radius: 175px;
+  -webkit-border-radius: 175px;
+  border-radius: 175px;
+  /**/
+  -moz-box-shadow: 3px 3px 5px #666;
+  -webkit-box-shadow: 3px 3px 5px #666;
+  box-shadow:  3px 3px 5px #666;
+}
+
+#block-block-12 div.content {
+  padding: 70px 33px 0 33px;
+}
+
+#block-block-12 div.content em {
+  color: rgb(176,59,49);
+}
+
+#block-block-12 div.content a.small {
+  color: rgb(208,157,31);
+}
+
+/* CSA Paypal Button */
+#content-bottom table {
+  border: none;
+  margin: 0 0 10px 8px;
+}
+
+#content-bottom table tbody {
+  border: none;
+  margin: 0 0 10px 8px;
+}
+
